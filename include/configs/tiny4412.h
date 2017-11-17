@@ -308,7 +308,7 @@
 #define CONFIG_SYS_MONITOR_LEN		(256 << 10)	/* 256 KiB */
 #define CONFIG_IDENT_STRING		" for TINY4412"
 
-#define CONFIG_ENABLE_MMU
+#undef CONFIG_ENABLE_MMU
 
 #ifdef CONFIG_ENABLE_MMU
 #define CONFIG_SYS_MAPPED_RAM_BASE	0xc0000000
@@ -440,5 +440,8 @@
 #define CFG_PHY_KERNEL_BASE	MEMORY_BASE_ADDRESS + 0x8000
 
 #define MEMORY_BASE_ADDRESS	0x40000000
+
+#define CONFIG_OF_LIBFDT
+#define CONFIG_SYS_BOOTMAPSZ            (20 << 20)      /* Initial Memory map for Linux */
 
 #endif	/* __CONFIG_H */
